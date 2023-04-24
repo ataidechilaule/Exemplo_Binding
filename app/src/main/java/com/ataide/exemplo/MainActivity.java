@@ -2,6 +2,7 @@ package com.ataide.exemplo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -12,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding mainBinding;
 
-    static final String USERNAMECONSTANTE = "lecc31";
+    static final String USERNAMECONSTANTE = "user";
     static final String PASSWORDCONSTANTE = "5432A";
 
     @Override
@@ -30,9 +31,14 @@ public class MainActivity extends AppCompatActivity {
                         String password = mainBinding.passED.getText().toString();
 
                         if ( username.equals(USERNAMECONSTANTE) && password.equals(PASSWORDCONSTANTE) ){
-                            Toast.makeText(MainActivity.this, "worked", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "worked", Toast.LENGTH_LONG).show();
+                            Intent i = new Intent(view.getContext(), Home.class);
+                            i.putExtra("user", username);
+                            i.putExtra("pass", password);
+                            startActivity(i);
+
                         }else {
-                            Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_LONG).show();
                         }
                     }
                 }
