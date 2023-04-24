@@ -1,4 +1,5 @@
-# Exemplo_Binding
+# Exemplo_Binding + Intents
+
 
 Steps:
 
