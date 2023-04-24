@@ -23,3 +23,13 @@ Steps:
    get: String nome = mainBinding.nameEditText.getText.toString();
     
    Set: mainBinding.nameEditText.setText("Ola mundo");
+   
+   
+   ----------------
+   ----------------
+   Exercicios sobre Intents (Opcional)
+   
+   
+   link: https://developer.android.com/guide/components/intents-common?hl=pt-br
+   Exemplos:  Despertador, Criar um timer e Compor uma mensagem SMS/MMS com anexo
+  
